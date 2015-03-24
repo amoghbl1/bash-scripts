@@ -29,7 +29,8 @@ do
         echo $line >> /data/data/com.whatsapp/shared_prefs/temp.xml
     fi
 done < /data/data/com.whatsapp/shared_prefs/com.whatsapp_preferences.xml 2>/dev/null
-mv /data/data/com.whatsapp/shared_prefs/temp.xml /data/data/com.whatsapp/shared_prefs/com.whatsapp_preferences.xml
+cp /data/data/com.whatsapp/shared_prefs/temp.xml /data/data/com.whatsapp/shared_prefs/com.whatsapp_preferences.xml
+rm -rf /data/data/com.whatsapp/shared_prefs/temp.xml
 rm -rf /data/data/com.whatsapp/shared_prefs/com.whatsapp_preferences.xml.backup
 killall com.whatsapp
 echo "IF YOU CAN READ THIS, YOU PROBABLY HAVE CALLING PERMISSIONS NOW ON WHATSAPP!! :D"
